@@ -1,0 +1,96 @@
+<head>
+    <style>
+        body {
+            font-family: helvetica, times, arial;
+            padding-top: 7%;
+            padding-bottom: 7%;
+            padding-left: 15%;
+            padding-right: 15%;            
+            font-size: 1.2em;
+            color: black;
+            background-color: white;
+        }
+
+        h1,h3 {
+            text-align: center;
+            margin-top: 2em;
+        }
+
+        p {
+            text-indent: 2em;
+            text-align:  justify;
+        }
+
+        img {
+            margin-bottom: 1em;
+            width: 90%;
+        }
+    </style>
+</head>
+<body>
+<h1>Gitcoin Quests: A Quick Review</h1>
+<div style="text-align: center;">
+    Reza Hasanzadeh<br/>
+    rz.hasanzade@gmail.com
+</div>
+<h3>Introduction</h3>
+<p>
+    Gitcoin quests is a gamified learning platform that tries to quickly and in a fun way onboard users to common topics of crypto space. A typical quest begins by giving the user a preparation document followed by a series of multiple choice questions. The user is rewarded some assets(kudoes, ...), once the she answers all of the questions correctly. Each question has to be answered before the time runs out. If time runs out or the answer is wrong, the quest is failed and the user has to retake it after some cooling period.
+</p>
+<p>
+    This document aims to provide a quick review of some experiences along with possible improvements.
+</p>
+
+<h3>Pixelated fonts</h3>
+<p>
+    Pixelated fonts refer to a class of font families that render text in a way that edges of letters are not blurred. This is done to imitate early days of computing when it was not feasible to render sharp text(Figure A).
+    <div style="text-align: center;">
+        <img src="./img/figure A.png"/><br/>
+        <span>Figure A: how text was rendered in early computer games.</span>
+    </div>
+</p>
+<p>
+    Today's rendering engines make heavy use of blurring algorithms to make text look sharp when there is not enough screen real state. Just like other technologies, blurring has its own drawbacks, after all it makes text look less aweful by tricking our vision into believing that curves are smooth. Some manufacturers have recently bagun to employ high-resolution displays to enable high-dpi or pixel-doubled rendering. The idea is to render elements of user interface 2x larger and then reduce them by 50%(200% scaling). This ensures that text and other elements look sharp. The amount of scaling and density of a display is determined by how close the user holds the device to her eyes. For large devices like desktop monitors, 2x-3x makes text look very sharp but for small ones like smart phones a scale of 4-6x is very common. So, the whole idea of sharp looking text seems to be of huge importance from the viewpoint user experience.
+</p>    
+<p>
+    From a humane point of view, our vision system is excellent at reaching consensus when sensory data is noisy, e.g. recognizing bad looking text, recongnition in low lighting, ... . We usually learn to read and write from hand-written material or standard printed text. Educational material with bad looking text is rarely found unless one is dealing with avant-garde artistic works. So, the idea of teaching/evaluating through bad looking text is not a good idea. How would you feel if you are sitting at an exam and the questions/answers are printed in non-standard letter forms?  Now make it worse, imagine you are evaluating non-natives of a language. Learning involves mastering new ideas, so we have to be really serious on how the material are going to be displayed on screen or paper. 
+</p>
+<p>
+    Gitcoin quests uses pixelated fonts for questions and answers. The rationale behind this might have been to look nostalgic and fun, but developers have forgotten the simple fact that users may treat quests as a serious educational endeavour. Moreover, a quest uses puts time limits on each question to make itself seem more competitive. With pixelated fonts, a considerable amount of time is thus spent recognizing questions and answers. So, it is natural to use standard font faces to at least relieve some pressure from users. If pixelation is to be retained, it is best to be used on non-critical elements that do not grab the focus of the user. Figure B demonsrates a typical quest interface with some highlighted regions for candidate improvments.<br/>
+    <div style="text-align: center;">
+        <img src="./img/figure B.png"/><br/>
+        <span>Figure B: pixelated text is hard to recognize.</span>
+    </div>
+</p>
+
+<h3>Contrast and background-foregound blending</h3>
+<p>Quests uses a fixed white color for fonts of questions and answers while the background is selected randomly from a set of presets. Some of the backgrounds are light colored and this makes it difficult for the text to be read. Some presets even go beyond this and have animated content right behind the text, this should also be limited or avoided at all because they simply grab the focus of the user. Figure C demonstartes an example where certain elements lack enough contrast while some provide enough contrast.<br/> 
+    <div style="text-align: center;">
+        <img src="./img/figure C.png"/><br/>
+        <span>Figure C: high contrast and low contrast elements</span>
+    </div></p>
+<p>
+    Random presets are not always bad. Figure D demonstrates an example of a preset with good overal contrast for all elements. White on navy blue and yellow on dark purple make perfect sense.<br/>    
+    <div style="text-align: center;">
+        <img src="./img/figure D.png"/><br/>
+        <span>Figure D: a preset with perfect contrast.</span>
+    </div>
+</p>
+
+<h3>Too much interesting is not always good</h3>
+<p>
+    Some quest backgrounds are unnecessary crowded and high in detail that are even more interesting than the main objective of the quests. It is like writing some text on a glass surface, putting it in front of a live view and then trying to read the text: it is hard to focus on the text! Figure E depicts this situation.<br/>
+    <div style="text-align: center;">
+        <img src="./img/figure E.png"/><br/>
+        <span>Figure E: sophisticated backgrounds take hold of our focus.</span>
+    </div>
+</p>
+
+<h3>Conclusion</h3>
+<p>
+    In this quick review, we tried to highlight some possible improvements about the user experience with a focus on the user interface elements. We hope this paves the way for some improvements leading to improved user experience.
+</p>
+<p style="text-align: right; margin-top: 4em;">
+    Last updated: March 6th, 2022
+</p>
+</body>
